@@ -15,6 +15,11 @@ geocode = RateLimiter(geolocator.geocode, min_delay_seconds=1)
 year = str(input("Enter the year: "))
 
 def reading_func(path):
+    """
+    (str) -> (dict)
+    Function for reading a file.
+
+    """
     dct = dict()
     with open(path, errors='ignore') as file:
         lines = file.readlines()
@@ -51,6 +56,11 @@ def reading_func(path):
 
 
 def color_picker():
+    """
+    (None) -> (str)
+    Function that returns a random string representing a color
+
+    """
     colors = ['red', 'blue', 'green', 'purple', 'orange', 'darkred',
               'lightred', 'beige', 'darkblue', 'darkgreen', 'cadetblue',
               'darkpurple', 'white', 'pink', 'lightblue', 'lightgreen',
@@ -59,6 +69,11 @@ def color_picker():
 
 
 def map_builder(locations):
+    """
+    (dict) -> (None)
+    Main function that builds an html site representing a map.
+    
+    """
     map = folium.Map(location=[48.314775, 25.082925] ,zoom_start=2)
     fg_movies = folium.FeatureGroup(name="Movies filmed in {}. (Name, Location)".format(year))
     counter = 0
@@ -94,4 +109,3 @@ def map_builder(locations):
 
 
 locs = reading_func("../docs/locations.list")
-print(map_builder(locs))
