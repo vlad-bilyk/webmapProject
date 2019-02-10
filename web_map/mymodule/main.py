@@ -72,7 +72,11 @@ def map_builder(locations):
     """
     (dict) -> (None)
     Main function that builds an html site representing a map.
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 34cdaed97f491d2a7e5042a958737d71a3978a60
     """
     map = folium.Map(location=[48.314775, 25.082925] ,zoom_start=2)
     fg_movies = folium.FeatureGroup(name="Movies filmed in {}. (Name, Location)".format(year))
@@ -109,4 +113,3 @@ def map_builder(locations):
 
 
 locs = reading_func("../docs/locations.list")
-print(map_builder(locs))
