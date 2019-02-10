@@ -1,4 +1,4 @@
-Current module is designed for building a web map which gives user information about locations where movies were filmed in the year, which is specified by user.\
+Current module is designed for building a web map which gives user information about locations where movies were filmed in the year, which is specified by user.
 
 about HTML tags:
 <head>
